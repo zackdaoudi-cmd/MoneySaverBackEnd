@@ -8,6 +8,7 @@ import java.util.Date;
 @Data
 @Entity
 public class SavingPlan {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSavingPlan ;
@@ -19,7 +20,6 @@ public class SavingPlan {
 
     @ManyToOne
     @JoinColumn(name = "idUser")
-    private User user;
-
+    private Users users;
 
 }
