@@ -4,19 +4,21 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Data
 @Entity
-public class Category {
-
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idCategory ;
-    private String labelCategory;
+    private Long idUser ;
+    private String username;
+    private String password ;
+    private Date CreateDate ;
 
     @OneToMany
-    private List<SubCategory> subCategories = new ArrayList<SubCategory>();
+    private List<SavingPlan> savingPlants=new ArrayList<SavingPlan>();
 
 
 
