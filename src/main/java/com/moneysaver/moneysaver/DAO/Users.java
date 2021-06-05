@@ -21,5 +21,13 @@ public class Users {
     private List<SavingPlan> savingPlants=new ArrayList<SavingPlan>();
 
 
+    public Users(Long idUser, String username, String password) {
+        this.idUser = idUser ;
+        this.username = username;
+        this.password = password;
+    }
 
+    public Users() {
+
+    }
 }
