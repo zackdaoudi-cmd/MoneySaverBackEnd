@@ -3,7 +3,6 @@ package com.moneysaver.moneysaver.DAO;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,9 +13,10 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCategory ;
     private String labelCategory;
+    private String type;
 
     @OneToMany
-    private List<SubCategory> subCategories = new ArrayList<SubCategory>();
+    private List<SubCategory> subCategories ;
 
 
 

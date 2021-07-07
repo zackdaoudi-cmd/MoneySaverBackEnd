@@ -20,7 +20,7 @@ public class BalanceManager {
     private Date date ;
 
     @OneToMany
-    private List<SubCategory> subCategory =  new ArrayList<SubCategory>();
+    private List<SubCategory> subCategory ;
 
     @OneToOne
     @JoinColumn(name="savingPlant_Id",referencedColumnName = "idSavingPlan")

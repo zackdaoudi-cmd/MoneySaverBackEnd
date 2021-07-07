@@ -1,5 +1,6 @@
 package com.moneysaver.moneysaver.DAO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,7 +20,7 @@ public class SavingPlan {
     private Float savingGoal ;
 
     @ManyToOne
-    @JoinColumn(name = "idUser")
+    @JsonIgnore
     private Users users;
 
 }

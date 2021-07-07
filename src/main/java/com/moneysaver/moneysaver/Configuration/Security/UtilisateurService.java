@@ -15,6 +15,7 @@ public class UtilisateurService implements UserDetailsService {
     @Autowired
     private UtilisateurRepository utilisateurRepository;
 
+
     @Override
     public UserDetails loadUserByUsername(String s) {
         Users subscriber = loadApplicationUserByUserName(s);
@@ -30,4 +31,6 @@ public class UtilisateurService implements UserDetailsService {
             return new Users(susbcriber.getIdUser(),susbcriber.getUsername(), susbcriber.getPassword());
         }
     }
+
+
 }

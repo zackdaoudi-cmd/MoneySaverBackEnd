@@ -39,6 +39,7 @@ public class UserController {
         Users u = new Users();
         u.setIdUser(jwtUser.getIdUser());
         u.setUsername(jwtUser.getUsername());
+        u.setSavingPlants(jwtUser.getSavingPlants());
         return u;
     }
 

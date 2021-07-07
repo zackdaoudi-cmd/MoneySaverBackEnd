@@ -1,6 +1,9 @@
 package com.moneysaver.moneysaver.DAO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,8 +20,8 @@ public class Users {
     private String password ;
     private Date CreateDate ;
 
-    @OneToMany
-    private List<SavingPlan> savingPlants=new ArrayList<SavingPlan>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
+    private List<SavingPlan> savingPlants;
 
 
     public Users(Long idUser, String username, String password) {
@@ -27,7 +30,6 @@ public class Users {
         this.password = password;
     }
 
-    public Users() {
+    public Users() {}
 
-    }
 }
